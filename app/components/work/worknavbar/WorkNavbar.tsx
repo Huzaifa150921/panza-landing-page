@@ -47,7 +47,7 @@ const WorkNavbar = () => {
                             className={`p-3 px-6 border transition-all duration-300  
               ${active === link
                                     ? "border-t-2 border-t-work-borderactive text-work-navtextactive"
-                                    : "border border-work-border text-work-navtext"}`}
+                                    : "border border-work-border text-work-navtext"} hover:text-work-navtextactive`}
                         >
                             {link}
                         </button>

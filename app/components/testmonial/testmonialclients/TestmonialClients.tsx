@@ -30,13 +30,13 @@ const TestmonialClients = () => {
                 <Image src={data[index].src} alt='img' fill className='object-cover  rounded-full border-4 border-testmonial-imageborder shadow-[0_0_20px] shadow-testmonial-imageshadow' />
             </div>
             <div className='flex gap-3 sm:gap-5 justify-center items-center flex-wrap mb-10 '>
-                <button onClick={handleBackward} className='border-2 border-testmonial-backbuttonborder p-2'><IoIosArrowBack size={20} className='text-testmonial-icon' /></button>
+                <button onClick={handleBackward} className='border-2 border-testmonial-backbuttonborder p-2 hover:scale-105'><IoIosArrowBack size={20} className='text-testmonial-icon' /></button>
                 {data.map((img, i) => (
                     <div key={i} className='relative h-[40px] w-[40px] sm:h-[50px] sm:w-[50px]'>
                         <Image fill src={img.src} alt={img.name} className={`object-cover rounded-full shadow-[0_0_10px] shadow-testmonial-imageshadow transition-all duration-300 ${index === i ? '-translate-y-3 sm:-translate-y-4 border-2 border-testmonial-imageborder animate-pulse' : ''}`} />
                     </div>
                 ))}
-                <button onClick={handleForward} className='bg-testmonial-buttonforwordbg border-2 border-testmonial-forwordbuttonborder p-2 '><IoChevronForwardOutline size={20} className='text-testmonial-icon' /></button>
+                <button onClick={handleForward} className='bg-testmonial-buttonforwordbg border-2 border-testmonial-forwordbuttonborder p-2 hover:scale-105'><IoChevronForwardOutline size={20} className='text-testmonial-icon' /></button>
             </div>
         </div>
     )

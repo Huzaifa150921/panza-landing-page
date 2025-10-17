@@ -53,7 +53,7 @@ const NavbarItems = ({ navbarHeight, loading, isMobile, onClose, sections }: Nav
 
                     >
                         <a
-                            className={`no-underline text-sm tracking-wide ${active === link ? "text-navbar-accent" : "text-navbar-text"}`}
+                            className={`no-underline text-sm tracking-wide ${active === link ? "text-navbar-accent" : "text-navbar-text "} hover:text-navbar-accent transition-all duration-300`}
                             href="#"
                             onClick={(e) => {
                                 e.preventDefault()
@@ -68,7 +68,7 @@ const NavbarItems = ({ navbarHeight, loading, isMobile, onClose, sections }: Nav
                     <>
                         <IoSearch size={20} className="cursor-pointer ml-2 text-navbar-text" />
                         <span
-                            className={`absolute h-[2px] bg-navbar-accent rounded transition-all duration-300 ${loading ? "opacity-0" : "opacity-100"}`}
+                            className={`absolute h-[2px] bg-navbar-accent rounded transition-all duration-300 animate-pulse ${loading ? "opacity-0 " : "opacity-100"}`}
                             style={{
                                 left: lineStyle.left,
                                 width: lineStyle.width,

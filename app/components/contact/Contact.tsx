@@ -36,7 +36,7 @@ const Contact = forwardRef<HTMLDivElement>((_, ref) => {
                         rows={8}
                         className="border border-contact-inputborder rounded p-2 w-full"
                     ></textarea>
-                    <button className='p-3 w-full md:w-[500px] bg-contact-buttonbg text-button-text rounded-md'>
+                    <button className='p-3 w-full md:w-[500px] bg-contact-buttonbg text-button-text rounded-md hover:skew-x-12 transition-all duration-300'>
                         SEND REQUEST
                     </button>
                 </div>

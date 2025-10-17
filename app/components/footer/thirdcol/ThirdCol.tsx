@@ -24,7 +24,7 @@ const ThirdCol = () => {
             <p className='text-sm mb-5 text-footer-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae.</p>
             <div className='flex flex-col sm:flex-row gap-2 md:gap-0'>
                 <input type="text" placeholder='Enter email' className='w-52 sm:w-auto p-2 bg-footer-inputbg text-footer-text px-4' />
-                <button className='p-2 font-extrabold px-3 bg-footer-inputbtnbg text-footer-inputbtntext'>GO</button>
+                <button className='p-2 font-extrabold px-3 bg-footer-inputbtnbg text-footer-inputbtntext hover:scale-105 transition-all duration-300'>GO</button>
             </div>
         </div>
     )
