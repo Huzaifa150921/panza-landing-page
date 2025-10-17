@@ -17,7 +17,7 @@ const News = forwardRef<HTMLDivElement>((_, ref) => {
 
     return (
         <>
-            <div ref={ref} className="w-full min-h-screen flex flex-col items-center px-4 sm:px-6 md:px-10">
+            <div ref={ref} className="w-full h-auto pb-20 flex flex-col items-center px-4 sm:px-6 md:px-10">
                 <div className="flex flex-col items-center gap-5">
                     <IntroText text="Breaking News" marginBottom="mb-10" marginTop="mt-10" headingColor="text-news-introtext" />
                 </div>

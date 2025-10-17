@@ -5,7 +5,7 @@ import Pricingcard from '@/app/components/pricing/pricingcard/Pricingcard'
 const Pricing = () => {
     return (
         <>
-            <div className="min-h-[110vh] w-full flex flex-col items-center px-4 sm:px-6 md:px-10">
+            <div className="h-auto pb-20 w-full flex flex-col items-center px-4 sm:px-6 md:px-10">
                 <div className="flex flex-col items-center gap-5">
                     <IntroHeading text="Our Pricing Table" marginBottom="mb-10" marginTop="mt-10" headingColor="text-pricing-introheading" />
                 </div>

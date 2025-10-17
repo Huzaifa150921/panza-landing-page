@@ -37,7 +37,7 @@ const ServicesNavLink = () => {
                             className={`${active === link
                                 ? 'bg-services-bgcoloractive border-services-bordercoloractive border text-services-textcoloractive'
                                 : 'text-services-textcolor bg-services-bgcolor border border-services-bordercolor'
-                                } transition-all duration-300 p-5 px-8 text-sm sm:text-base font-semibold z-20 `}
+                                } transition-all duration-300 p-5 px-8 text-sm sm:text-base font-semibold z-20 w-[200px] lg:w-auto`}
                         >
                             {link}
                         </button>

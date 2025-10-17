@@ -6,7 +6,7 @@ import ServicesNavLink from '@/app/components/ourservice/servicesnavlink/Service
 const Services = forwardRef<HTMLDivElement>((_, ref) => {
     return (
         <>
-            <div ref={ref} className='w-full min-h-[60vh] flex flex-col items-center'>
+            <div ref={ref} className='w-full h-auto pb-20 flex flex-col items-center'>
                 <div className='flex items-center flex-col gap-5'>
                     <SectionHeadingCenter
                         text='Our Services'

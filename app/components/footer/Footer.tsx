@@ -6,7 +6,7 @@ import FourthCol from '@/app/components/footer/fourthcol/FourthCol'
 
 const Footer = () => {
     return (
-        <div className='w-full bg-footer-bg pt-20 px-6 sm:px-10 md:px-20 lg:px-32 min-h-[90vh]'>
+        <div className='w-full bg-footer-bg pt-20 px-6 sm:px-10 md:px-20 lg:px-32 h-auto pb-20'>
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10'>
                 <div><FirstCol /></div>
                 <div><SecondCol /></div>

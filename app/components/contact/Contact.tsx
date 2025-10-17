@@ -8,8 +8,8 @@ const MapComponent = dynamic(() => import('@/app/components/contact/contactmap/C
 
 const Contact = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <div ref={ref} className="w-full min-h-screen flex flex-col md:flex-row items-start md:items-center justify-start gap-3 ">
-            <div className="z-10 w-full md:w-[700px] h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg">
+        <div ref={ref} className="w-full h-auto pb-20 pt-20 flex flex-col md:flex-row items-start md:items-center justify-start gap-3 ">
+            <div className="z-10 w-full md:w-[700px] h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg px-2 md:px-0">
                 <MapComponent />
             </div>
 
@@ -20,7 +20,7 @@ const Contact = forwardRef<HTMLDivElement>((_, ref) => {
                     marginBottom="mb-14"
                     headingColor="text-contact-introheading"
                 />
-                <div className="flex flex-col gap-2 w-full md:w-[500px] items-center md:items-start">
+                <div className="flex flex-col gap-2 w-full md:w-[500px] items-center md:items-start px-2 md:px-0">
                     <input
                         type="text"
                         placeholder="Name"

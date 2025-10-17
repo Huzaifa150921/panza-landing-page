@@ -5,7 +5,7 @@ import TestmonialClients from '@/app/components/testmonial/testmonialclients/Tes
 
 const Testmonial = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <div ref={ref} className='w-full max-h-[90vh]  md:h-screen bg-testmonial bg-cover bg-center flex flex-col items-center px-4 sm:px-6 md:px-10  '>
+        <div ref={ref} className='w-full h-auto pb-10 bg-testmonial bg-cover bg-center flex flex-col items-center px-4 sm:px-6 md:px-10  '>
             <div className='flex flex-col justify-center items-center gap-5'>
                 <Introheading headingColor='text-testmonial-introheading' marginBottom='mb-10' marginTop='mt-10' text='What People Say About Panza' />
             </div>

@@ -8,7 +8,7 @@ import image4 from '@/public/images/team/team4.jpg'
 
 const Team = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <div ref={ref} className='flex flex-col items-center w-full min-h-[70vh] px-4 sm:px-6 md:px-10'>
+        <div ref={ref} className='flex flex-col items-center w-full h-auto pb-10 px-4 sm:px-6 md:px-10'>
             <div className='flex flex-col justify-center items-center gap-5'>
                 <IntroHeading text='Meet Our Team' marginBottom='mb-10' marginTop='mt-10' headingColor='text-team-introheading' />
             </div>

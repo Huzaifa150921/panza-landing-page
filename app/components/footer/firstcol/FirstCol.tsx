@@ -6,7 +6,7 @@ const FirstCol = () => {
             <h1 className='mb-5 font-extrabold text-2xl sm:text-3xl text-footer-heading'>
                 PANZ<span className='text-footer-active'>A</span>
             </h1>
-            <p className='text-sm sm:text-base mb-8 sm:mb-10 text-justify sm:text-left text-footer-text'>
+            <p className='text-sm sm:text-base mb-8 sm:mb-10 text-center sm:text-left text-footer-text'>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quisquam asperiores molestias ad soluta sit aperiam optio natus
             </p>
             <div className='mb-2'>

@@ -55,7 +55,7 @@ const WorkNavbar = () => {
                 ))}
             </ul>
 
-            <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-3  mt-5">
+            <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-3  mt-5 mx-2 md:mx-0">
                 {filteredImages.map((img, index) => (
                     <div key={index} className="relative w-full h-20  overflow-hidden ">
                         <Image

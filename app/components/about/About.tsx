@@ -4,7 +4,7 @@ import AboutProgressBar from '@/app/components/about/aboutprogressbar/AboutProgr
 
 const About = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <div ref={ref} className="bg-about bg-center bg-cover min-h-[80vh] md:min-h-[85vh] w-full flex flex-col gap-10 items-center px-4 sm:px-6 md:px-10">
+        <div ref={ref} className="bg-about bg-center bg-cover h-auto pb-20 w-full flex flex-col gap-10 items-center px-4 sm:px-6 md:px-10">
             <div className="flex flex-col items-center gap-7">
                 <SectionHeadingCenter
                     text="About Over Company"

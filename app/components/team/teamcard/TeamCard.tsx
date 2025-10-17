@@ -14,7 +14,7 @@ type TeamCardProps = {
 
 const TeamCard = ({ name, role, image }: TeamCardProps) => {
     return (
-        <div className='flex flex-col items-center w-[210px] sm:w-[180px] md:w-[210px]'>
+        <div className='flex flex-col items-center w-[215px] sm:w-[185px] md:w-[215px] '>
             <div className='relative w-full h-[150px] sm:h-[130px] md:h-[150px]'>
                 <Image src={image} alt='img' fill className='object-cover' />
             </div>
