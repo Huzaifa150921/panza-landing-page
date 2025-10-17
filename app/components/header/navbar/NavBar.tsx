@@ -31,7 +31,7 @@ const NavBar = () => {
         <>
             <div
                 ref={navbarRef}
-                className="min-h-[15vh] bg-navbar-bg flex items-center justify-between px-6 lg:px-12 fixed min-w-[100vw] z-50"
+                className="min-h-[10vh] lg:min-h-[15vh] bg-navbar-bg flex items-center justify-between px-6 lg:px-0 lg:justify-evenly  fixed min-w-[100vw] z-50"
             >
                 <h1 className="text-navbar-text text-3xl font-extrabold">
                     PANZ<span className="text-navbar-accent">A</span>

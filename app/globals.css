@@ -82,7 +82,7 @@
   --worknav-button-bg-color: rgb(21, 177, 143);
 
   /* Services  */
-  --services-text-color: black;
+  --services-text-color: rgb(39, 39, 39);
   --service-nav-button-bg-color-active: rgb(27, 173, 125);
   --service-nav-button-bg-color: rgb(218, 218, 218);
   --service-nav-button-border-color-active: rgb(27, 173, 125);
