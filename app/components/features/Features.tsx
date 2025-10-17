@@ -18,5 +18,5 @@ const Features = forwardRef<HTMLDivElement>((_, ref) => {
 
     )
 });
-
+Features.displayName = "Features"
 export default Features

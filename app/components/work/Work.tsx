@@ -16,5 +16,5 @@ const Work = forwardRef<HTMLDivElement>((_, ref) => {
         </>
     )
 })
-
+Work.displayName = "Work"
 export default Work

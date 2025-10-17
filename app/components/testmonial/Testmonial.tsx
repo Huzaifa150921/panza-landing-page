@@ -14,5 +14,5 @@ const Testmonial = forwardRef<HTMLDivElement>((_, ref) => {
         </div>
     )
 })
-
+Testmonial.displayName = "Testmonial"
 export default Testmonial

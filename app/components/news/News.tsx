@@ -46,5 +46,5 @@ const News = forwardRef<HTMLDivElement>((_, ref) => {
         </>
     )
 })
-
+News.displayName = "News"
 export default News

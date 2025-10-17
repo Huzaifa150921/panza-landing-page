@@ -21,5 +21,5 @@ const Services = forwardRef<HTMLDivElement>((_, ref) => {
         </>
     )
 })
-
+Services.displayName = "Services"
 export default Services

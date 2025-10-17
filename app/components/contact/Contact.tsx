@@ -45,4 +45,6 @@ const Contact = forwardRef<HTMLDivElement>((_, ref) => {
     )
 })
 
+Contact.displayName = "Contact"
+
 export default Contact

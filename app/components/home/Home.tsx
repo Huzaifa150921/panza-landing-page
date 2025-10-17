@@ -37,5 +37,6 @@ const Home = forwardRef<HTMLDivElement>((_, ref) => {
         </div>
     )
 })
+Home.displayName = "Home"
 
 export default Home

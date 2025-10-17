@@ -21,5 +21,6 @@ const Team = forwardRef<HTMLDivElement>((_, ref) => {
         </div>
     )
 })
+Team.displayName = "Team"
 
 export default Team

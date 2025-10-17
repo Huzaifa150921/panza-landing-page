@@ -10,7 +10,7 @@ import Pricing from "@/app/components/pricing/Pricing";
 import Testmonial from "@/app/components/testmonial/Testmonial";
 import Team from "@/app/components/team/Team";
 import Wordpress from "@/app/components/wrodpress/wordpress";
-import Contact from "@/app/components/contact/contact";
+import Contact from "@/app/components/contact/Contact";
 import Footer from "@/app/components/footer/Footer";
 import CopyRight from "@/app/components/copyright/CopyRight";
 import { useRef } from "react";
