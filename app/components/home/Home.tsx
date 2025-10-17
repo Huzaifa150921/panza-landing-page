@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PrimaryButton from '@/app/components/uielements/buttons/primarybutton/PrimaryButton'
 
-const Home = () => {
+const Home = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <div className="bg-home bg-cover bg-center min-h-screen w-full relative">
+        <div ref={ref} className="bg-home bg-cover bg-center min-h-screen w-full relative">
             <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-20 text-center">
                 <div className="flex flex-col gap-8 sm:gap-10 md:gap-16 items-center max-w-4xl w-full">
                     <div>
@@ -36,6 +36,6 @@ const Home = () => {
             </div>
         </div>
     )
-}
+})
 
 export default Home

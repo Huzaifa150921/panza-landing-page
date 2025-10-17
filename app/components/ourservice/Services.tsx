@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import SectionHeadingCenter from '@/app/components/uielements/sectionsheadingcenter/SectionHeadingCenter'
 import ServicesSecondary from '@/app/components/ourservice/servicessecondary/ServicesSecondary'
 import ServicesNavLink from '@/app/components/ourservice/servicesnavlink/ServicesNavLink'
 
-const Services = () => {
+const Services = forwardRef<HTMLDivElement>((_, ref) => {
     return (
         <>
-            <div className='w-full min-h-[60vh] flex flex-col items-center'>
+            <div ref={ref} className='w-full min-h-[60vh] flex flex-col items-center'>
                 <div className='flex items-center flex-col gap-5'>
                     <SectionHeadingCenter
                         text='Our Services'
@@ -20,6 +20,6 @@ const Services = () => {
             <ServicesSecondary />
         </>
     )
-}
+})
 
 export default Services

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import IntroText from "@/app/components/uielements/sectionsheadingcenter/SectionHeadingCenter"
 import NewsCard from '@/app/components/news/newscard/NewsCard'
 import Image1 from '@/public/images/blogs/blog3.png'
@@ -13,10 +13,11 @@ import { FaCartShopping } from "react-icons/fa6";
 import { FaMapLocationDot } from "react-icons/fa6";
 import SecondaryNewsCard from '@/app/components/news/secondarynewscard/SecondaryNewsCard'
 
-const News = () => {
+const News = forwardRef<HTMLDivElement>((_, ref) => {
+
     return (
         <>
-            <div className="w-full min-h-screen flex flex-col items-center px-4 sm:px-6 md:px-10">
+            <div ref={ref} className="w-full min-h-screen flex flex-col items-center px-4 sm:px-6 md:px-10">
                 <div className="flex flex-col items-center gap-5">
                     <IntroText text="Breaking News" marginBottom="mb-10" marginTop="mt-10" headingColor="text-news-introtext" />
                 </div>
@@ -44,6 +45,6 @@ const News = () => {
             </div>
         </>
     )
-}
+})
 
 export default News

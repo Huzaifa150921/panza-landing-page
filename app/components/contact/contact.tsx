@@ -1,14 +1,14 @@
 'use client'
 
-import React from 'react'
+import React, { forwardRef } from 'react'
 import dynamic from 'next/dynamic'
 import IntroHeading from "@/app/components/uielements/sectionsheadingcenter/SectionHeadingCenter"
 
 const MapComponent = dynamic(() => import('@/app/components/contact/contactmap/ContactMap'), { ssr: false })
 
-const Contact = () => {
+const Contact = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <div className="w-full min-h-screen flex flex-col md:flex-row items-start md:items-center justify-start gap-3 ">
+        <div ref={ref} className="w-full min-h-screen flex flex-col md:flex-row items-start md:items-center justify-start gap-3 ">
             <div className="z-10 w-full md:w-[700px] h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg">
                 <MapComponent />
             </div>
@@ -43,6 +43,6 @@ const Contact = () => {
             </div>
         </div>
     )
-}
+})
 
 export default Contact

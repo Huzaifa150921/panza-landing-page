@@ -1,3 +1,4 @@
+'use client'
 import NavBar from "@/app/components/header/navbar/NavBar";
 import HomeCard from "@/app/components/home/homecardflex/HomeCardFlex";
 import Features from "@/app/components/features/Features";
@@ -12,21 +13,36 @@ import Wordpress from "@/app/components/wrodpress/wordpress";
 import Contact from "@/app/components/contact/contact";
 import Footer from "@/app/components/footer/Footer";
 import CopyRight from "@/app/components/copyright/CopyRight";
+import { useRef } from "react";
 export default function Home() {
+
+  const sections = {
+
+    HOME: useRef<HTMLDivElement | null>(null),
+    FEATURES: useRef<HTMLDivElement | null>(null),
+    ABOUT: useRef<HTMLDivElement | null>(null),
+    WORK: useRef<HTMLDivElement | null>(null),
+    SERVICES: useRef<HTMLDivElement | null>(null),
+    NEWS: useRef<HTMLDivElement | null>(null),
+    TESTMONIAL: useRef<HTMLDivElement | null>(null),
+    TEAM: useRef<HTMLDivElement | null>(null),
+    CONTACT: useRef<HTMLDivElement | null>(null),
+  };
+
   return (
     <>
-      <NavBar />
+      <NavBar sections={sections} />
       <HomeCard />
-      <Features />
-      <About />
-      <Work />
-      <Services />
-      <News />
+      <Features ref={sections.FEATURES} />
+      <About ref={sections.ABOUT} />
+      <Work ref={sections.WORK} />
+      <Services ref={sections.SERVICES} />
+      <News ref={sections.NEWS} />
       <Pricing />
-      <Testmonial />
-      <Team />
+      <Testmonial ref={sections.TESTMONIAL} />
+      <Team ref={sections.TEAM} />
       <Wordpress />
-      <Contact />
+      <Contact ref={sections.CONTACT} />
       <Footer />
       <CopyRight />
     </>

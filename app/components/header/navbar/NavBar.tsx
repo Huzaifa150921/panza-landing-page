@@ -4,7 +4,15 @@ import NavbarItems from '@/app/components/header/navbar/navbaritems/NavbarItems'
 import Home from "@/app/components/home/Home"
 import { FiMenu, FiX } from "react-icons/fi"
 
-const NavBar = () => {
+
+type SectionsType = { [key: string]: React.RefObject<HTMLDivElement | null> }
+
+type NavBarProps = {
+    sections: SectionsType
+}
+
+const NavBar = ({ sections }: NavBarProps) => {
+
     const [navbarHeight, setNavbarHeight] = useState<number>(0)
     const navbarRef = useRef<HTMLDivElement>(null)
     const [loading, setLoading] = useState<boolean>(false)
@@ -37,7 +45,7 @@ const NavBar = () => {
                     PANZ<span className="text-navbar-accent">A</span>
                 </h1>
                 <div className="hidden lg:flex">
-                    <NavbarItems navbarHeight={navbarHeight} loading={loading} />
+                    <NavbarItems sections={sections} navbarHeight={navbarHeight} loading={loading} />
                 </div>
                 <div className="lg:hidden text-navbar-text">
                     {menuOpen ? (
@@ -48,12 +56,12 @@ const NavBar = () => {
                 </div>
             </div>
             <div
-                className={`fixed top-[15vh] left-0 min-w-[100vw] bg-navbar-bg flex flex-col items-center justify-center gap-6 py-6 transition-all duration-300 lg:hidden z-[60] ${menuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+                className={`fixed top-[10vh] left-0 min-w-[100vw] bg-navbar-bg flex flex-col items-center justify-center gap-6 py-6 transition-all duration-300 lg:hidden z-[60] ${menuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
                     }`}
             >
-                <NavbarItems navbarHeight={navbarHeight} loading={loading} isMobile onClose={() => setMenuOpen(false)} />
+                <NavbarItems sections={sections} navbarHeight={navbarHeight} loading={loading} isMobile onClose={() => setMenuOpen(false)} />
             </div>
-            <Home />
+            <Home ref={sections.HOME} />
         </>
     )
 }

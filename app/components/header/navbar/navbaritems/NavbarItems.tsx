@@ -6,11 +6,12 @@ type NavbarItemProps = {
     loading: boolean
     isMobile?: boolean
     onClose?: () => void
+    sections: { [key: string]: React.RefObject<HTMLElement | null> }
 }
 
-const navlinks = ["HOME", "ABOUT", "SKILLS", "SERVICE", "WORK", "TESTMONIAL", "BLOG", "TEAM", "CONTACT"]
+const navlinks = ["HOME", "FEATURES", "ABOUT", "WORK", "SERVICES", "NEWS", "TESTMONIAL", "TEAM", "CONTACT"]
 
-const NavbarItems = ({ navbarHeight, loading, isMobile, onClose }: NavbarItemProps) => {
+const NavbarItems = ({ navbarHeight, loading, isMobile, onClose, sections }: NavbarItemProps) => {
     const [active, setActive] = useState("HOME")
     const [lineStyle, setLineStyle] = useState({ left: 0, width: 0 })
     const itemRefs = useRef<Array<HTMLLIElement | null>>([])
@@ -24,6 +25,19 @@ const NavbarItems = ({ navbarHeight, loading, isMobile, onClose }: NavbarItemPro
         }
     }, [active])
 
+
+    const handleClick = (link: string) => {
+        setActive(link)
+        if (onClose) onClose()
+        const sectionRef = sections[link]
+        if (sectionRef?.current) {
+            const offset = navbarHeight || 0
+            const top = sectionRef.current.offsetTop - offset
+            window.scrollTo({ top, behavior: "smooth" })
+        }
+    }
+
+
     return (
         <div className="relative inline-block">
             <ul
@@ -36,14 +50,15 @@ const NavbarItems = ({ navbarHeight, loading, isMobile, onClose }: NavbarItemPro
                             itemRefs.current[index] = el
                         }}
                         className="relative cursor-pointer"
-                        onClick={() => {
-                            setActive(link)
-                            if (onClose) onClose()
-                        }}
+
                     >
                         <a
                             className={`no-underline text-sm tracking-wide ${active === link ? "text-navbar-accent" : "text-navbar-text"}`}
                             href="#"
+                            onClick={(e) => {
+                                e.preventDefault()
+                                handleClick(link)
+                            }}
                         >
                             {link}
                         </a>
@@ -63,7 +78,7 @@ const NavbarItems = ({ navbarHeight, loading, isMobile, onClose }: NavbarItemPro
                     </>
                 )}
             </ul>
-        </div>
+        </div >
     )
 }
 
