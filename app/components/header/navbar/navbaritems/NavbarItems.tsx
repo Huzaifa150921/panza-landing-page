@@ -2,6 +2,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import { IoSearch } from "react-icons/io5"
 import { gsap } from '@/app/lib/gsapScroll'
+import { headerNavLinks } from "@/app/constants/constants"
 type NavbarItemProps = {
     navbarHeight: number
     loading: boolean
@@ -10,7 +11,7 @@ type NavbarItemProps = {
     sections: { [key: string]: React.RefObject<HTMLElement | null> }
 }
 
-const navlinks = ["HOME", "FEATURES", "ABOUT", "WORK", "SERVICES", "NEWS", "TESTMONIAL", "TEAM", "CONTACT"]
+
 
 const NavbarItems = ({ navbarHeight, loading, isMobile, onClose, sections }: NavbarItemProps) => {
     const [active, setActive] = useState("HOME")
@@ -18,7 +19,7 @@ const NavbarItems = ({ navbarHeight, loading, isMobile, onClose, sections }: Nav
     const itemRefs = useRef<Array<HTMLLIElement | null>>([])
 
     useEffect(() => {
-        const activeIndex = navlinks.indexOf(active)
+        const activeIndex = headerNavLinks.indexOf(active)
         const current = itemRefs.current[activeIndex]
         if (current) {
             const { offsetLeft, offsetWidth } = current
@@ -48,7 +49,7 @@ const NavbarItems = ({ navbarHeight, loading, isMobile, onClose, sections }: Nav
             <ul
                 className={`list-none ${isMobile ? "flex flex-col items-center gap-4" : "flex gap-5 items-center"} relative`}
             >
-                {navlinks.map((link, index) => (
+                {headerNavLinks.map((link, index) => (
                     <li
                         key={link}
                         ref={(el) => {

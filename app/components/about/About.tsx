@@ -1,32 +1,10 @@
 'use client'
 import React, { forwardRef, useState } from 'react'
 import SectionHeadingCenter from '@/app/components/uielements/sectionsheadingcenter/SectionHeadingCenter'
-import AboutProgressBar from '@/app/components/about/aboutprogressbar/AboutProgressBar'
 import image from '@/public/images/background/about.jpg'
 import Image from 'next/image'
+import { aboutLinks } from '@/app/constants/constants'
 
-const links = [
-    {
-        label: 'OUR HISTORY',
-        content: (
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus minima pariatur nesciunt quia dolorem, at esse natus error reprehenderit quae eum laudantium ab quas dolore sed, sequi, deserunt praesentium fugit? Autem ullam natus suscipit ipsum doloremque odio fuga, maiores corrupti praesentium reiciendis? Quas et voluptas quibusdam ipsa dicta. Autem, consequuntur inventore eveniet sapiente consectetur harum placeat ratione quas ipsum nisi quis ea quisquam. Earum neque necessitatibus repudiandae at quidem tenetur amet provident mollitia possimus, dolore eius adipisci deleniti doloribus quaerat reprehenderit cupiditate consequuntur explicabo ipsum facilis, quasi laborum. Veritatis incidunt
-            </p>
-        ),
-    },
-    {
-        label: 'OUR BIOGRAPHY',
-        content: (
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus minima pariatur nesciunt quia dolorem, at esse natus error reprehenderit quae eum laudantium ab quas dolore sed, sequi, deserunt praesentium fugit? Autem ullam natus suscipit ipsum doloremque odio fuga, maiores corrupti praesentium reiciendis? Quas et voluptas quibusdam ipsa dicta. Autem, consequuntur inventore eveniet sapiente consectetur harum placeat ratione quas ipsum nisi quis ea quisquam. Earum neque necessitatibus repudiandae at quidem tenetur amet provident mollitia possimus, dolore eius adipisci deleniti doloribus quaerat reprehenderit cupiditate consequuntur explicabo ipsum facilis, quasi laborum. Veritatis incidunt
-            </p>
-        ),
-    },
-    {
-        label: 'OUR SKILLS',
-        content: <AboutProgressBar />,
-    },
-]
 
 const About = forwardRef<HTMLDivElement>((_, ref) => {
     const [activeIndex, setActiveIndex] = useState<number>(2)
@@ -62,7 +40,7 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
                 <div className="flex flex-col gap-6 max-w-xl w-full justify-start items-start ">
 
                     <div className="flex flex-wrap justify-center lg:justify-start gap-5 ">
-                        {links.map((tab, index) => (
+                        {aboutLinks.map((tab, index) => (
                             <button
                                 key={index}
                                 onClick={() => setActiveIndex(index)}
@@ -82,7 +60,7 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
 
 
                     <div className="text-about-navigation text-center lg:text-left leading-relaxed">
-                        {links[activeIndex].content}
+                        {typeof aboutLinks[activeIndex].content == 'string' ? <p>{aboutLinks[activeIndex].content}</p> : aboutLinks[activeIndex].content}
                     </div>
                 </div>
             </div>
@@ -92,3 +70,5 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
 
 About.displayName = 'About'
 export default About
+
+

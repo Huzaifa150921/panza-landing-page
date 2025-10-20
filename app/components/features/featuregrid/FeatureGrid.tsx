@@ -9,22 +9,22 @@ import { MdConstruction } from 'react-icons/md'
 import { FaLightbulb } from 'react-icons/fa6'
 import { FaPaperPlane } from 'react-icons/fa'
 import { FaIdCard } from 'react-icons/fa'
+import { featureText } from '@/app/constants/constants'
 
 const FeatureGrid = () => {
-    const text =
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam accusantium odio nulla rem eaque pariatur rerum.'
+
 
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 mt-6 w-full">
-            <FeaturesCard Icon={FaLeaf} heading="Rectina Ready" body={text} isMain={true} />
-            <FeaturesCard Icon={MdEditCalendar} heading="Rectina Ready" body={text} isMain={false} />
-            <FeaturesCard Icon={FaSearch} heading="Rectina Ready" body={text} isMain={false} />
-            <FeaturesCard Icon={PiTimerFill} heading="Rectina Ready" body={text} isMain={false} />
-            <FeaturesCard Icon={FaLaptopCode} heading="Rectina Ready" body={text} isMain={false} />
-            <FeaturesCard Icon={MdConstruction} heading="Rectina Ready" body={text} isMain={false} />
-            <FeaturesCard Icon={FaLightbulb} heading="Rectina Ready" body={text} isMain={false} />
-            <FeaturesCard Icon={FaPaperPlane} heading="Rectina Ready" body={text} isMain={false} />
-            <FeaturesCard Icon={FaIdCard} heading="Rectina Ready" body={text} isMain={false} />
+            <FeaturesCard Icon={FaLeaf} heading="Rectina Ready" body={featureText.text} isMain={true} />
+            <FeaturesCard Icon={MdEditCalendar} heading="Rectina Ready" body={featureText.text} isMain={false} />
+            <FeaturesCard Icon={FaSearch} heading="Rectina Ready" body={featureText.text} isMain={false} />
+            <FeaturesCard Icon={PiTimerFill} heading="Rectina Ready" body={featureText.text} isMain={false} />
+            <FeaturesCard Icon={FaLaptopCode} heading="Rectina Ready" body={featureText.text} isMain={false} />
+            <FeaturesCard Icon={MdConstruction} heading="Rectina Ready" body={featureText.text} isMain={false} />
+            <FeaturesCard Icon={FaLightbulb} heading="Rectina Ready" body={featureText.text} isMain={false} />
+            <FeaturesCard Icon={FaPaperPlane} heading="Rectina Ready" body={featureText.text} isMain={false} />
+            <FeaturesCard Icon={FaIdCard} heading="Rectina Ready" body={featureText.text} isMain={false} />
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const services: string[] = ['1 Hosting', '2 Email Marketing', '5 Database', '2 Design Pack', '3 Website Layout', '5 Header Style', '3 Online Store']
+import { priceServices } from '@/app/constants/constants'
 
 type pricingcardProps = {
     active?: boolean
@@ -27,7 +27,7 @@ const Pricingcard = ({ active, heading, price }: pricingcardProps) => {
                 </h1>
             </div>
 
-            {services.map((item, index) => (
+            {priceServices.map((item, index) => (
                 <div key={index} className="min-h-[6vh] w-full bg-transparent flex justify-center items-center border-t border-pricing-cardborder">
                     <h1 className="text-xs sm:text-sm md:text-base">{item}</h1>
                 </div>
