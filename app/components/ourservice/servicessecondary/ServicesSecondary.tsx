@@ -22,13 +22,13 @@ const ServicesSecondary = () => {
             })
 
             t1.from(headingRef.current, {
-                x: 100,
+                y: -60,
                 opacity: 0,
                 duration: 1,
                 ease: 'power3.out',
             })
                 .from(paraRef.current, {
-                    x: -100,
+                    y: 60,
                     opacity: 0,
                     duration: 1,
                     ease: 'power3.out',

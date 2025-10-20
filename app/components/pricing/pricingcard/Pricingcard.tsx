@@ -10,11 +10,11 @@ type pricingcardProps = {
 
 const Pricingcard = ({ active, heading, price }: pricingcardProps) => {
     return (
-        <div className={`overflow-hidden min-h-[70vh] sm:min-h-[75vh] w-[80vw] sm:w-[250px] md:w-[260px] border border-pricing-cardborder rounded bg-pricing-cardbg flex flex-col items-center relative ${active ? 'z-10 shadow-[0_0_10px_2px_theme(colors.pricing.cardshadow)]' : ''} hover:scale-105 hover:z-20 cursor-pointer transition-all duration-300`}>
+        <div className={`overflow-hidden min-h-[70vh] sm:min-h-[75vh] w-[80vw] sm:w-[250px] md:w-[260px] border border-pricing-cardborder rounded bg-pricing-cardbg flex flex-col items-center relative ${active ? ' z-10 shadow-[0_0_10px_2px_theme(colors.pricing.cardshadow)]' : ''} hover:scale-105 hover:z-20 cursor-pointer transition-all duration-300`}>
             <h1 className={`mt-3 text-base sm:text-lg md:text-xl uppercase font-extrabold ${active ? 'text-pricing-cardheadingactive' : 'text-pricing-cardheading'}`}>{heading}</h1>
 
             {active && (
-                <div className="absolute h-5 w-24 rotate-[40deg] bg-pricing-cardbannerbg top-1 -right-7 p-3">
+                <div className="absolute h-5 w-24 rotate-[40deg] bg-pricing-cardbannerbg top-1 -right-7 p-3 animate-pulse">
                     <h3 className="text-[10px] sm:text-xs absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-pricing-cardbannertext">
                         OFFER
                     </h3>

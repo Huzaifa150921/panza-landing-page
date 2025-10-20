@@ -59,9 +59,9 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
                 </div>
 
 
-                <div className="flex flex-col gap-6 max-w-xl w-full justify-start items-start transition-all duration-300">
+                <div className="flex flex-col gap-6 max-w-xl w-full justify-start items-start ">
 
-                    <div className="flex flex-wrap justify-center lg:justify-start gap-5 text-center  sm:text-left">
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-5 ">
                         {links.map((tab, index) => (
                             <button
                                 key={index}
