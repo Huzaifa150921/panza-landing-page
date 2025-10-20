@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "gsap": "^3.13.0",
     "leaflet": "^1.9.4",
     "next": "15.5.4",
     "react": "19.1.0",

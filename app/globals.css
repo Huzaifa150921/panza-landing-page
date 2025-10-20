@@ -162,6 +162,10 @@
   --team-bg-color: rgba(0, 11, 17, 0.945);
   --team-icon-color: white;
   --team-border-color: rgb(192, 192, 192);
+  --team-fb-color: blue;
+  --team-x-color: rgb(12, 160, 160);
+  --team-skype-color: rgb(52, 111, 238);
+  --team-insta-color: red;
 
   /* Wordpress  */
   --wordpress-primary-heading-color: rgb(255, 255, 255);

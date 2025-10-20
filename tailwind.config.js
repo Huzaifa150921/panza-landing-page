@@ -153,6 +153,10 @@ module.exports = {
           bg: 'var(--team-bg-color)',
           icon: 'var(--team-icon-color)',
           border: 'var(--team-border-color)',
+          facebook: 'var(--team-fb-color)',
+          X: 'var(--team-x-color)',
+          skype: 'var(--team-skype-color)',
+          insta: 'var(--team-insta-color)'
         },
 
         wordpress: {

@@ -10,8 +10,7 @@ const links = [
         label: 'OUR HISTORY',
         content: (
             <p>
-                Our company began with a mission to deliver innovative solutions and quality service.
-                Over the years, we have grown from a small team into a trusted organization serving clients worldwide.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus minima pariatur nesciunt quia dolorem, at esse natus error reprehenderit quae eum laudantium ab quas dolore sed, sequi, deserunt praesentium fugit? Autem ullam natus suscipit ipsum doloremque odio fuga, maiores corrupti praesentium reiciendis? Quas et voluptas quibusdam ipsa dicta. Autem, consequuntur inventore eveniet sapiente consectetur harum placeat ratione quas ipsum nisi quis ea quisquam. Earum neque necessitatibus repudiandae at quidem tenetur amet provident mollitia possimus, dolore eius adipisci deleniti doloribus quaerat reprehenderit cupiditate consequuntur explicabo ipsum facilis, quasi laborum. Veritatis incidunt
             </p>
         ),
     },
@@ -19,8 +18,7 @@ const links = [
         label: 'OUR BIOGRAPHY',
         content: (
             <p>
-                Our biography reflects a journey of dedication, creativity, and resilience.
-                With a team of experts across disciplines, we continuously evolve to meet modern challenges.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus minima pariatur nesciunt quia dolorem, at esse natus error reprehenderit quae eum laudantium ab quas dolore sed, sequi, deserunt praesentium fugit? Autem ullam natus suscipit ipsum doloremque odio fuga, maiores corrupti praesentium reiciendis? Quas et voluptas quibusdam ipsa dicta. Autem, consequuntur inventore eveniet sapiente consectetur harum placeat ratione quas ipsum nisi quis ea quisquam. Earum neque necessitatibus repudiandae at quidem tenetur amet provident mollitia possimus, dolore eius adipisci deleniti doloribus quaerat reprehenderit cupiditate consequuntur explicabo ipsum facilis, quasi laborum. Veritatis incidunt
             </p>
         ),
     },
@@ -61,9 +59,9 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
                 </div>
 
 
-                <div className="flex flex-col gap-6 max-w-xl w-full">
+                <div className="flex flex-col gap-6 max-w-xl w-full justify-start items-start transition-all duration-300">
 
-                    <div className="flex flex-wrap justify-center lg:justify-start gap-5 text-center sm:text-left">
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-5 text-center  sm:text-left">
                         {links.map((tab, index) => (
                             <button
                                 key={index}

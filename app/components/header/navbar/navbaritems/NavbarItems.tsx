@@ -1,6 +1,7 @@
+'use client'
 import React, { useRef, useState, useEffect } from "react"
 import { IoSearch } from "react-icons/io5"
-
+import { gsap } from '@/app/lib/gsapScroll'
 type NavbarItemProps = {
     navbarHeight: number
     loading: boolean
@@ -33,7 +34,11 @@ const NavbarItems = ({ navbarHeight, loading, isMobile, onClose, sections }: Nav
         if (sectionRef?.current) {
             const offset = navbarHeight || 0
             const top = sectionRef.current.offsetTop - offset
-            window.scrollTo({ top, behavior: "smooth" })
+            gsap.to(window, {
+                duration: 1.2,
+                scrollTo: { y: top },
+                ease: "power2.inOut"
+            })
         }
     }
 

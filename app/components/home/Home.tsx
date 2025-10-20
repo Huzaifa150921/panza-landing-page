@@ -1,10 +1,31 @@
-import React, { forwardRef } from 'react'
+'use client'
+import React, { forwardRef, useEffect, useRef } from 'react'
 import PrimaryButton from '@/app/components/uielements/buttons/primarybutton/PrimaryButton'
+import { gsap } from '@/app/lib/gsapScroll'
 
 const Home = forwardRef<HTMLDivElement>((_, ref) => {
+
+
+    useEffect(() => {
+
+
+        gsap.from('.home-content > *', {
+            scrollTrigger: {
+                trigger: '.home-content',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+            },
+            y: 60,
+            opacity: 0,
+            duration: 2,
+            ease: 'power3.out',
+            stagger: 0.2,
+        })
+    }, [])
+
     return (
         <div ref={ref} className="bg-home bg-cover bg-center min-h-screen w-full relative">
-            <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-20 text-center">
+            <div className="home-content absolute inset-0 flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-20 text-center">
                 <div className="flex flex-col gap-8 sm:gap-10 md:gap-16 items-center max-w-4xl w-full">
                     <div>
                         <h2 className="text-home-headingprimary text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold leading-tight">

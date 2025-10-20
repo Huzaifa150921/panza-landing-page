@@ -24,10 +24,10 @@ const TeamCard = ({ name, role, image }: TeamCardProps) => {
                     <h2 className='text-xs sm:text-sm font-semibold text-team-role'>{role}</h2>
                 </div>
                 <div className='flex'>
-                    <TeamButton Icon={FaFacebookF} />
-                    <TeamButton Icon={FaTwitter} />
-                    <TeamButton Icon={RiSkypeFill} />
-                    <TeamButton Icon={AiFillInstagram} />
+                    <TeamButton Icon={FaFacebookF} isFacebook />
+                    <TeamButton Icon={FaTwitter} isX />
+                    <TeamButton Icon={RiSkypeFill} isSkype />
+                    <TeamButton Icon={AiFillInstagram} isInsta />
                 </div>
             </div>
         </div>
